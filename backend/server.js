@@ -5,6 +5,7 @@ import { connectDB } from "./db/connectDB.js";
 import cookieParser from "cookie-parser";
 import path from "path";
 import questionsRoute from "./routes/questions.js";
+import compilerRoute from "./routes/compiler.js";
 
 dotenv.config();
 
@@ -30,6 +31,7 @@ app.use(cookieParser());
 
 // Questions API
 app.use("/api/questions", questionsRoute);
+app.use("/api/compiler", compilerRoute);
 
 app.listen(PORT, () => {
 	connectDB();

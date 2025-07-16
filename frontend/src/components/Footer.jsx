@@ -10,7 +10,9 @@ export default function Footer() {
           <Link to="/about" className="hover:text-indigo-600 transition-colors">
             About Us
           </Link>
-
+          <Link to="/compiler" className="hover:text-indigo-600 transition-colors">
+            Compiler
+          </Link>
           <a
             href="mailto:someone@example.com"
             className="hover:text-indigo-600 transition-colors"

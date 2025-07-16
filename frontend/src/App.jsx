@@ -7,6 +7,7 @@ import NotFound from './pages/NotFound.jsx';
 import AboutUs from './pages/AboutUs.jsx';
 import ContactUs from './pages/ContactUs.jsx';
 import Footer from './components/Footer.jsx';
+import CompilerPage from './pages/CompilerPage.jsx';
 
 function NavLink({ to, children }) {
   const location = useLocation();
@@ -44,6 +45,7 @@ export default function App() {
           <nav className="hidden md:flex items-center gap-4">
             <NavLink to="/">Student</NavLink>
             <NavLink to="/questions">Question</NavLink>
+            <NavLink to="/compiler">Compiler</NavLink>
             <NavLink to="/about">About Us</NavLink>
             <NavLink to="/contact">Contact Us</NavLink>
           </nav>
@@ -84,6 +86,7 @@ export default function App() {
           >
             <NavLink to="/">Student</NavLink>
             <NavLink to="/questions">Question</NavLink>
+            <NavLink to="/compiler">Compiler</NavLink>
             <NavLink to="/about">About Us</NavLink>
             <NavLink to="/contact">Contact Us</NavLink>
           </nav>
@@ -95,6 +98,7 @@ export default function App() {
           <Route path="/" element={<StudentPage />} />
           <Route path="/admin" element={<AdminPage />} />
           <Route path="/questions" element={<QuestionPage />} />
+          <Route path="/compiler" element={<CompilerPage />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="*" element={<NotFound />} />
